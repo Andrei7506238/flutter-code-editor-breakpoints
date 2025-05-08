@@ -35,6 +35,9 @@ class GutterStyle {
   /// Whether to show folding handles column.
   final bool showFoldingHandles;
 
+  /// Whether to show breakpoints column.
+  final bool showBreakpoints;
+
   /// Whether there is any column to show in gutter.
   bool get showGutter => showLineNumbers || showErrors || showFoldingHandles;
 
@@ -44,6 +47,7 @@ class GutterStyle {
     this.showErrors = true,
     this.showFoldingHandles = true,
     this.showLineNumbers = true,
+    this.showBreakpoints = true,
     this.width = 80.0,
     this.background,
     this.errorPopupTextStyle,
@@ -58,6 +62,7 @@ class GutterStyle {
     showErrors: false,
     showFoldingHandles: false,
     showLineNumbers: false,
+    showBreakpoints: false,
   );
 
   GutterStyle copyWith({
@@ -74,6 +79,7 @@ class GutterStyle {
         showErrors: showErrors,
         showFoldingHandles: showFoldingHandles,
         showLineNumbers: showLineNumbers,
+        showBreakpoints: showBreakpoints,
       );
 }
 

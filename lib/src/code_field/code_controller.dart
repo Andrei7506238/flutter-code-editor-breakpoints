@@ -63,6 +63,8 @@ class CodeController extends TextEditingController {
     unawaited(analyzeCode());
   }
 
+  Set<int> breakpoints = {};
+  void Function(int)? onToggleBreakpoint;
   AnalysisResult analysisResult;
   String _lastAnalyzedText = '';
   Timer? _debounce;
